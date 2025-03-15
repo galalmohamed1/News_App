@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/core/constants/app_assets.dart';
+import 'package:news_app/data/models/article_model.dart';
+import 'package:news_app/data/models/category_model.dart';
+import 'package:news_app/data/models/sources_model.dart';
+import 'package:news_app/data/network/api_network.dart';
 import 'package:news_app/main.dart';
-import 'package:news_app/models/article_model.dart';
-import 'package:news_app/models/sources_model.dart';
-import 'package:news_app/network/api_network.dart';
-
-import '../../../models/category_model.dart';
 
 class HomeViewModel extends ChangeNotifier {
   int _selectedIndex = 0;

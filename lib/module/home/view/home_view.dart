@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter/rendering.dart';
 import 'package:news_app/core/theme/app_color.dart';
 import 'package:news_app/module/home/home_view_model/home_view_model.dart';
-import 'package:news_app/module/home/widget/category_card_widget.dart';
-import 'package:news_app/module/home/widget/drawer_widget.dart';
-import 'package:news_app/module/home/widget/selected_category_view.dart';
-import 'package:news_app/network/api_network.dart';
+import 'package:news_app/module/home/view/widget/category_card_widget.dart';
+import 'package:news_app/module/home/view/widget/drawer_widget.dart';
+import 'package:news_app/module/home/view/widget/selected_category_view.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 

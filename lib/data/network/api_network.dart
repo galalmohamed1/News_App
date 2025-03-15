@@ -4,8 +4,8 @@ import 'dart:developer';
 import 'package:http/http.dart' as http;
 import 'package:news_app/core/constants/constans.dart';
 import 'package:news_app/core/constants/end_point.dart';
-import 'package:news_app/models/article_model.dart';
-import 'package:news_app/models/sources_model.dart';
+import 'package:news_app/data/models/article_model.dart';
+import 'package:news_app/data/models/sources_model.dart';
 abstract class ApiNetwork {
 
 

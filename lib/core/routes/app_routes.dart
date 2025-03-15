@@ -1,5 +1,5 @@
 import 'dart:developer';
-import 'package:news_app/module/home/home_view.dart';
+import 'package:news_app/module/home/view/home_view.dart';
 import 'package:news_app/module/splash/splash_view.dart';
 
 import '/core/routes/app_routes_name.dart';

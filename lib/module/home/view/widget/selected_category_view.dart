@@ -1,7 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:news_app/core/theme/app_color.dart';
-import 'package:news_app/models/category_model.dart';
+import 'package:news_app/data/models/category_model.dart';
 import 'package:news_app/module/home/home_view_model/home_view_model.dart';
 import 'package:provider/provider.dart';
 import 'package:skeletonizer/skeletonizer.dart';

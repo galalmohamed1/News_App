@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/core/theme/app_color.dart';
-import 'package:news_app/models/category_model.dart';
+import 'package:news_app/data/models/category_model.dart';
 
 class CategoryCardWidget extends StatelessWidget {
   final int index;
