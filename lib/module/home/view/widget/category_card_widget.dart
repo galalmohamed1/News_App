@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/core/theme/app_color.dart';
 import 'package:news_app/data/models/category_model.dart';
+import 'package:news_app/module/home/home_view_model/home_view_model.dart';
+import 'package:provider/provider.dart';
 
 class CategoryCardWidget extends StatelessWidget {
   final int index;
@@ -15,6 +17,7 @@ class CategoryCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var _provider = Provider.of<HomeViewModel>(context, listen: false);
     return Stack(
       alignment: (index%2==0)?Alignment.bottomRight:Alignment.bottomLeft,
       children: [
@@ -36,7 +39,7 @@ class CategoryCardWidget extends StatelessWidget {
               width: 170,
               margin: EdgeInsets.all(18.0),
               decoration: BoxDecoration(
-                color: Colors.white38,
+                color:_provider.isDark()?ColorPalette.black.withOpacity(0.5):Colors.white38,
                 borderRadius: BorderRadius.circular(84.0),
               ),
               child: Directionality(
@@ -44,11 +47,12 @@ class CategoryCardWidget extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment:MainAxisAlignment.spaceBetween,
                   children: [
-                    const Padding(
+                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 10.0),
                       child: Text(
                         "View All",
                         style: TextStyle(
+                          color: _provider.isDark()?ColorPalette.white:ColorPalette.black,
                           fontWeight: FontWeight.bold,
                           fontSize: 24,
                         ),
@@ -58,10 +62,10 @@ class CategoryCardWidget extends StatelessWidget {
                       height: 55,
                       width: 55,
                       decoration: BoxDecoration(
-                        color: ColorPalette.white,
+                        color: _provider.isDark()?ColorPalette.black:ColorPalette.white,
                         shape: BoxShape.circle,
                       ),
-                      child: Icon(Icons.arrow_forward_ios),
+                      child: Icon(Icons.arrow_forward_ios,color: _provider.isDark()?ColorPalette.white:ColorPalette.black,),
                     ),
                   ],
                 ),

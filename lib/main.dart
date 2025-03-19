@@ -10,7 +10,6 @@ GlobalKey<NavigatorState> navigatorKey= GlobalKey<NavigatorState>();
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(
-
       ChangeNotifierProvider(
         create: (context) => HomeViewModel(),
           child: const MyApp())

@@ -5,55 +5,16 @@ import 'package:news_app/data/models/category_model.dart';
 import 'package:news_app/data/models/sources_model.dart';
 import 'package:news_app/data/network/api_network.dart';
 import 'package:news_app/main.dart';
-
 class HomeViewModel extends ChangeNotifier {
+
   int _selectedIndex = 0;
   CategoryDataModel? _selectedCategory;
   List<Source> _sourcesList = [];
   List<Article> _articlesList = [];
-  final List<CategoryDataModel> _categoriesList=[
-    CategoryDataModel(
-      categoryId: "general",
-      categoryName: "General",
-      categoryImg: AppAssets.GeneralImg,
-    ),
-    CategoryDataModel(
-      categoryId: "business",
-      categoryName: "Business",
-      categoryImg: AppAssets.businessImg,
-    ),
-    CategoryDataModel(
-      categoryId: "sport",
-      categoryName: "Sport",
-      categoryImg: AppAssets.SportImg,
-    ),
-    CategoryDataModel(
-      categoryId: "technology",
-      categoryName: "Technology",
-      categoryImg: AppAssets.TechnologyImg,
-    ),
-    CategoryDataModel(
-      categoryId: "entertainment",
-      categoryName: "Entertainment",
-      categoryImg: AppAssets.EntertainmentImg,
-    ),
-    CategoryDataModel(
-      categoryId: "health",
-      categoryName: "Health",
-      categoryImg: AppAssets.HealthImg,
-    ),
-    CategoryDataModel(
-      categoryId: "science",
-      categoryName: "Science",
-      categoryImg: AppAssets.ScienceImg,
-    ),
-  ];
 
   int get selectedIndex => _selectedIndex;
 
   CategoryDataModel? get selectedCategoryModel => _selectedCategory;
-
-  List<CategoryDataModel> get categoriesList => _categoriesList;
 
   List<Source> get sourcesList => _sourcesList;
 

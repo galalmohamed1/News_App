@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:news_app/core/theme/app_color.dart';
 import 'package:news_app/data/models/category_model.dart';
 import 'package:news_app/module/home/home_view_model/home_view_model.dart';
 import 'package:provider/provider.dart';
@@ -40,6 +41,8 @@ class _SelectedCategoryViewState extends State<SelectedCategoryView> {
               tabAlignment: TabAlignment.start,
               indicatorPadding: EdgeInsets.zero,
               labelPadding: const EdgeInsets.symmetric(horizontal: 12.0),
+              labelColor: _Provider.isDark()?Colors.white:ColorPalette.black,
+              unselectedLabelColor:_Provider.isDark()?Colors.white.withOpacity(0.6):ColorPalette.black ,
               padding: const EdgeInsets.symmetric(vertical: 10),
                 tabs: _Provider.sourcesList.map(
                       (e) => Text(e.name),
@@ -61,7 +64,7 @@ class _SelectedCategoryViewState extends State<SelectedCategoryView> {
                       imageBuilder: (context, imageProvider) => Container(
                         padding: const EdgeInsets.all(12.0),
                         decoration: BoxDecoration(
-                          border: Border.all(color: Colors.black),
+                          border: Border.all(color: _Provider.isDark()?Colors.white:ColorPalette.black),
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: Column(
@@ -69,7 +72,7 @@ class _SelectedCategoryViewState extends State<SelectedCategoryView> {
                             Expanded(
                               child: Container(
                                 decoration: BoxDecoration(
-                                  border: Border.all(color: Colors.black),
+                                  border: Border.all(color: _Provider.isDark()?Colors.white:ColorPalette.black),
                                   borderRadius: BorderRadius.circular(12),
                                   image: DecorationImage(
                                     image: imageProvider,
@@ -85,7 +88,8 @@ class _SelectedCategoryViewState extends State<SelectedCategoryView> {
                             const SizedBox(height: 10),
                             Text(
                               _Provider.articlesList[index].title,
-                              style: const TextStyle(
+                              style:  TextStyle(
+                                color: _Provider.isDark()?Colors.white:ColorPalette.black,
                                   height: 1.2,
                                   fontWeight: FontWeight.bold,
                               ),
